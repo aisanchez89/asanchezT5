@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="asanchezT5.MainPage">
+
+    <StackLayout>
+        <Label Text="RUTA SEGURA ISRAEL" FontSize="20" HorizontalTextAlignment="Center"/>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Text="Id_ruta" TextColor="Aquamarine" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+            <Label Text="Sector" TextColor="Aquamarine" FontSize="18" Grid.Row="0" Grid.Column="1"/>
+            <Label Text="Barrio" TextColor="Aquamarine" FontSize="18" Grid.Row="0" Grid.Column="2"/>
+            <Label Text="Calle_principal" TextColor="Aquamarine" FontSize="18" Grid.Row="0" Grid.Column="3"/>
+            <Label Text="Numeracion" TextColor="Aquamarine" FontSize="18" Grid.Row="0" Grid.Column="4"/>
+            <Label Text="Calle_secundaria" TextColor="Aquamarine" FontSize="18" Grid.Row="0" Grid.Column="5"/>
+        </Grid>
+
+        <ListView x:Name="RutasRegistradas">
+            <!-- List View datos almacenados en la instancia-->
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition/>
+                                </Grid.RowDefinitions>
+
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                    <ColumnDefinition/>
+                                </Grid.ColumnDefinitions>
+
+                                <Label Text="{Binding Id_ruta}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="0"/>
+                                <Label Text="{Binding Sector}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="1"/>
+                                <Label Text="{Binding Barrio}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="2"/>
+                                <Label Text="{Binding Calle_principal}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="3"/>
+                                <Label Text="{Binding Numeracion}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="4"/>
+                                <Label Text="{Binding Calle_secundaria}" TextColor="Black" FontSize="18" Grid.Row="0" Grid.Column="5"/>
+                            </Grid>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button x:Name="btnMostrar" Text="Mostrar" Clicked="btnMostrar_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
